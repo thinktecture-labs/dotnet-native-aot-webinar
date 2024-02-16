@@ -7,6 +7,8 @@ namespace WebApp.Reflection;
 
 public static class UnboundReflectionEndpoint
 {
+    private static readonly string Namespace = "WebApp.Reflection";
+    
     public static WebApplication MapUnboundReflectionEndpoint(this WebApplication app)
     {
         app.MapGet("/api/reflection/unbound", GetUnboundReflectionData);
@@ -15,7 +17,8 @@ public static class UnboundReflectionEndpoint
 
     private static IResult GetUnboundReflectionData()
     {
-        var type = Type.GetType("WebApp.Reflection.Calculator");
+        var typeName = $"{Namespace}.Calculator";
+        var type = Type.GetType(typeName);
         if (type is null)
         {
             return Results.NotFound();
