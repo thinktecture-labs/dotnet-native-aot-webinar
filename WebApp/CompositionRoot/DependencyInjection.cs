@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using WebApp.CommonValidation;
 using WebApp.Contacts;
 using WebApp.DatabaseAccess;
+using WebApp.Eventing;
 using WebApp.JsonAccess;
 using WebApp.LoggingConfiguration;
 using WebApp.ToDo;
@@ -22,6 +23,7 @@ public static class DependencyInjection
            .AddToDoModule()
            .AddContactsModule()
            .AddMediator(options => options.ServiceLifetime = ServiceLifetime.Transient)
+           .AddEventing()
            .AddHealthChecks();
         return builder;
     }

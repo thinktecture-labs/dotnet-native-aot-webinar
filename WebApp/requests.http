@@ -10,6 +10,9 @@ GET {{baseAddress}}/api/reflection/unbound
 ### ToDos
 GET {{baseAddress}}/todos
 
+### ProduceEvent
+POST {{baseAddress}}/api/produce-event
+
 ### GetContacts
 GET {{baseAddress}}/api/contacts
 

@@ -2,6 +2,7 @@
 using System.Text.Json.Serialization;
 using WebApp.Contacts.Common;
 using WebApp.Contacts.GetContacts;
+using WebApp.Eventing;
 using WebApp.Reflection;
 using WebApp.ToDo.GetToDos;
 
@@ -13,4 +14,5 @@ namespace WebApp.JsonAccess;
 [JsonSerializable(typeof(List<ContactListDto>))]
 [JsonSerializable(typeof(ContactDetailDto))]
 [JsonSerializable(typeof(IDictionary<string, string[]>))]
+[JsonSerializable(typeof(MyMessage))]
 public sealed partial class AppJsonSerializationContext : JsonSerializerContext;

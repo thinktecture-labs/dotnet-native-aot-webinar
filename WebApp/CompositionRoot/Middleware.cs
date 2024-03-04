@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Serilog;
 using WebApp.Contacts;
+using WebApp.Eventing;
 using WebApp.Reflection;
 using WebApp.ToDo;
 
@@ -15,7 +16,8 @@ public static class Middleware
         app.MapReflectionEndpoint()
            .MapUnboundReflectionEndpoint()
            .MapToDoEndpoints()
-           .MapContactEndpoints();
+           .MapContactEndpoints()
+           .MapProduceEventEndpoint();
         app.MapHealthChecks("/");
         return app;
     }
