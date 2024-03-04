@@ -21,6 +21,9 @@ public static class DependencyInjection
            .AddCommonValidation()
            .AddToDoModule()
            .AddContactsModule()
+           .AddMediatR(
+                configuration => configuration.RegisterServicesFromAssemblyContaining(typeof(DependencyInjection))
+            )
            .AddHealthChecks();
         return builder;
     }
