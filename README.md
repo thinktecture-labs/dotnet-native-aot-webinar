@@ -2,6 +2,10 @@
 
 *This repo contains the slides and example code for the Thinktecture Webinar about .NET Native AOT, held on March 6th 2024.*
 
+Watch the Webinar in German language on YouTube:
+
+[![Watch the German Webinar on YouTube](https://img.youtube.com/vi/Iiu4VAQO64A/hqdefault.jpg)](https://youtu.be/Iiu4VAQO64A?si=GgQKUdkLkTNUz87F)
+
 ## How to build and run the example
 
 To run the example, please ensure that you have the following things installed:
